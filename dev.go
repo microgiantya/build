@@ -2,6 +2,7 @@
 package build
 
 import (
+	"os"
 	. "github.com/microgiantya/logger"
 
 	"debug/buildinfo"
