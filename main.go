@@ -4,6 +4,7 @@ import (
 	"os"
 	"fmt"
 	"reflect"
+	"debug/buildinfo"
 
 	"github.com/microgiantya/asciiart"
 
