@@ -1,7 +1,6 @@
 package build
 
 import (
-	"fmt"
 	"reflect"
 
 	"github.com/microgiantya/asciiart"
