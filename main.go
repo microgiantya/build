@@ -1,6 +1,7 @@
 package build
 
 import (
+	"os"
 	"fmt"
 	"reflect"
 
@@ -41,6 +42,13 @@ type _buildInfo struct {
 }
 
 func init() {
+	info, err := buildinfo.ReadFile(os.Args[0])
+        if err != nil {
+                fmt.Println(err)
+                os.Exit(1)
+        }
+        fmt.Printf("%+v\n", info.String())
+
 	for _, line := range asciiart.Lib[buildInfo.Name] {
 		I_("", line)
 	}
