@@ -14,7 +14,7 @@ const (
 )
 
 var (
-	name        string = "tratata"
+	name        string
 	version     string
 	date        string
 	host        string
