@@ -1,7 +1,5 @@
 package build
 
-package build
-
 import (
 	"fmt"
 	"reflect"
