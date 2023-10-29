@@ -1,6 +1,7 @@
 package build
 
 import (
+	"fmt"
 	"reflect"
 
 	"github.com/microgiantya/asciiart"
@@ -44,8 +45,9 @@ func init() {
 		I_("", line)
 	}
 
+	t := reflect.TypeOf(buildInfo)
 	v := reflect.ValueOf(buildInfo)
 	for i := 0; i < v.NumField(); i++ {
-		I_(p, v.Field(i).Interface())
+		I_(p, fmt.Sprintf("%s: %+v", t.Field(i).Name, v.Field(i).Interface()))
 	}
 }
